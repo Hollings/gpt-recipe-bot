@@ -6,11 +6,15 @@ import os
 import numpy as np
 import tensorflow as tf
 import sys
-
+import random
 import model, sample, encoder
 
 # print(sys.argv[1])
 # sys.exit(0);
+def random_food():
+    line = (random.choice(list(open('foods.txt'))))
+    return line
+
 def interact_model(
     model_name='117M',
     seed=None,
@@ -50,7 +54,7 @@ def interact_model(
         saver.restore(sess, ckpt)
 
         while True:
-            raw_text = "Pancake Recipe:"
+            raw_text = random_food() + " Recipe:"
             context_tokens = enc.encode(raw_text)
             generated = 0
             for _ in range(nsamples // batch_size):
@@ -63,7 +67,7 @@ def interact_model(
                     text = text.split("<|endoftext|>")[0]
                     text = text.replace("\n","<br>")
                     text_file = open("/var/www/recipe/index.html", "w")
-                    text = "<h1>" + raw_text + "</h1><div style='width:66%'>" + str(text) + "</div>"
+                    text = "<h1>" + raw_text + "</h1><div style='width:66%;position:absolute;left:16%'>" + str(text) + "</div>"
                     text_file.write(text)
                     text_file.close()
                     # print(str(text))
