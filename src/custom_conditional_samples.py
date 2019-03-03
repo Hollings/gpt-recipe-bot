@@ -67,7 +67,7 @@ def interact_model(
                     text = text.split("<|endoftext|>")[0]
                     text = text.replace("\n","<br>")
                     text_file = open("/var/www/recipe/index.html", "w")
-                    text = "<h1>" + raw_text + "</h1><div style='width:66%;position:absolute;left:16%'>" + str(text) + "</div>"
+                    text = "<div style='width:66%;position:absolute;left:16%'><h1>" + raw_text + "</h1>" + str(text) + "</div>"
                     text_file.write(text)
                     text_file.close()
                     # print(str(text))
