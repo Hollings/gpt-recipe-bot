@@ -63,9 +63,10 @@ def interact_model(
                     text = text.split("<|endoftext|>")[0]
                     text = text.replace("\n","<br>")
                     text_file = open("/var/www/recipe/index.html", "w")
-                    text_file.write(str(text))
+                    text = "<h1>" + raw_text + "</h1><div style='width:66%'>" + str(text) + "</div>"
+                    text_file.write(text)
                     text_file.close()
-                    print(str(text))
+                    # print(str(text))
 
 if __name__ == '__main__':
     fire.Fire(interact_model)
