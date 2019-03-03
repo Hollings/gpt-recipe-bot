@@ -16,7 +16,7 @@ def interact_model(
     seed=None,
     nsamples=1,
     batch_size=None,
-    length=400,
+    length=1000,
     temperature=0.8,
     top_k=40,
 ):
@@ -60,9 +60,12 @@ def interact_model(
                 for i in range(batch_size):
                     generated += 1
                     text = enc.decode(out[i])
-                    text_file = open("../index.html", "w")
-                    text_file.write(str(generated))
+                    text = text.split("<|endoftext|>")[0]
+                    text = text.replace("\n","<br>")
+                    text_file = open("index.html", "w")
+                    text_file.write(str(text))
                     text_file.close()
+                    print(str(text))
 
 if __name__ == '__main__':
     fire.Fire(interact_model)
