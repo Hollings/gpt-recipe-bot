@@ -29,7 +29,6 @@ Cheese dog
 Cheese fries
 Cheesesteak
 Chicago-style pizza
-Chicken à la King
 Chicken and waffles
 Chicken Divan
 Chicken fingers
@@ -71,7 +70,7 @@ Eggo
 Eggs Benedict
 Eggs Neptune
 Energy bar
-Engastration (e.g., Turducken)
+Turducken
 Fajita
 Fortune cookie
 French dip
@@ -81,7 +80,6 @@ Fry sauce
 Frybread
 Garden salad
 German chocolate cake
-Goulash
 Greek-American cuisine
 Green bean casserole
 Grilled cheese
@@ -120,8 +118,6 @@ Milk toast
 Milkshake
 Mission burrito
 Mozzarella sticks
-Muffuletta
-Mulligan stew
 Onion ring
 Oreo
 Oysters Rockefeller
@@ -137,7 +133,6 @@ Pepperoni Rolls
 Pickled cucumber
 Pigs in blankets
 Pizza strips
-Ploye
 Pop-Tarts
 Popcorn
 Popover
@@ -167,11 +162,9 @@ Senate bean soup
 Slinger
 Sloppy joe
 Smelt
-Sonofabitch stew
 Soul food
 Sour cream
 Soup and sandwich
-Squab
 Steak
 Steak sandwich
 Steak sauce
@@ -180,48 +173,34 @@ Steamed ham
 Stuffed ham
 Stuffed peppers
 Stuffed zucchini
-Succotash
 Surf and turf
 Swiss steak
-Tetrazzini
-Cuisine of the Thirteen Colonies
 Thousand Island dressing
 Toaster Strudel
 Tomato compote
 Tuna casserole
 Turducken
 Thanksgiving turkey
-Vichyssoise
 Waffle
 Sandwich bread
 Butter With Bread
 American fried rice
-Calas
-Charleston red rice
-Chicken bog
 Dirty rice
 Glorified rice
 Gumbo
 Hawaiian haystack
 Hokkien fried rice
-Hoppin' John
 Jambalaya
 Rice and gravy
 Shrimp Creole
 Spanish rice
-Yeung Chow fried rice
-Andouille
 Bologna sausage
 Breakfast sausage
-Chaudin
 Chorizo
-Goetta
 Half-smoke
 Hot dog
 Italian hot dog
-Kielbasa (sometimes called Polish sausage, or Polska kielbasa)
-Lebanon bologna
-Maxwell Street Polish
-Polish Boy
+Polish sausage
+Bologna
 Salami
 Vienna sausage

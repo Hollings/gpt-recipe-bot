@@ -13,7 +13,7 @@ import model, sample, encoder
 # sys.exit(0);
 def random_food():
     line = (random.choice(list(open('foods.txt'))))
-    return line
+    return line.title()
 
 def interact_model(
     model_name='117M',
