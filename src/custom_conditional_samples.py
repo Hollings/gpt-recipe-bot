@@ -62,7 +62,7 @@ def interact_model(
                     text = enc.decode(out[i])
                     text = text.split("<|endoftext|>")[0]
                     text = text.replace("\n","<br>")
-                    text_file = open("index.html", "w")
+                    text_file = open("/var/www/recipe/index.html", "w")
                     text_file.write(str(text))
                     text_file.close()
                     print(str(text))
