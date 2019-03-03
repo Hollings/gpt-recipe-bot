@@ -8,6 +8,7 @@ import tensorflow as tf
 import sys
 import random
 import model, sample, encoder
+import wikipedia
 
 # print(sys.argv[1])
 # sys.exit(0);
@@ -54,7 +55,13 @@ def interact_model(
         saver.restore(sess, ckpt)
 
         while True:
-            raw_text = random_food() + " Recipe:"
+            food = random_food();
+            raw_text = food + " Recipe:"
+            try:
+                wiki = wikipedia.page(food)
+                image = "<img src='" + wiki.images[0] + "'>"
+            except:
+                image = ""
             context_tokens = enc.encode(raw_text)
             generated = 0
             for _ in range(nsamples // batch_size):
@@ -67,7 +74,7 @@ def interact_model(
                     text = text.split("<|endoftext|>")[0]
                     text = text.replace("\n","<br>")
                     text_file = open("/var/www/recipe/index.html", "w")
-                    text = "<div style='width:66%;position:absolute;left:16%'><h1>" + raw_text + "</h1>" + str(text) + "</div>"
+                    text = "<div style='width:66%;position:absolute;left:16%'><h1>" + raw_text + "</h1>" + image + "<br>" + str(text) + "</div>"
                     text_file.write(text)
                     text_file.close()
                     # print(str(text))
