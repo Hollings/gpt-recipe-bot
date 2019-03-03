@@ -59,7 +59,10 @@ def interact_model(
             raw_text = food + " Recipe:"
             try:
                 wiki = wikipedia.page(food)
-                image = "<img style='max-height:300px;' src='" + wiki.images[0] + "'>"
+                for image in wiki.images:
+                    if "svg" not in image:
+                        image = "<img style='max-height:300px;' src='" + wiki.images[0] + "'>"
+                        break
             except:
                 image = ""
             context_tokens = enc.encode(raw_text)
